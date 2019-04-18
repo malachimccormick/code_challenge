@@ -24,6 +24,21 @@ export class AddCompanyComponent implements OnInit {
       email: this.email,
       performance: this.performance
     };
+    if (typeof company.companyinfo === 'undefined') {
+      return false;
+    }
+    if (typeof company.status === 'undefined') {
+      return false;
+    }
+    if (typeof company.contacts === 'undefined') {
+      return false;
+    }
+    if (typeof company.email === 'undefined') {
+      return false;
+    }
+    if (typeof company.performance === 'undefined') {
+      return false;
+    }
     // the company variable is then passed to the addCompany function in the companys
     // component.
     this.addCompany.emit(company);

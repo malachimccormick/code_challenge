@@ -48,12 +48,6 @@ export class CompanyItemComponent implements OnInit {
      }
     console.log(company);
     this.editCompany.emit(company);
-    // && company.performance === 'undefined' ||
-    //     company.email === 'undefined' && company.contacts === 'undefined' && company.status === 'undefined') {
-    //    return console.log('empty');
-    //  } else {
-    //   //  the data is passed up to the edit function in the companys component 
-    //  }
   }
 
 
