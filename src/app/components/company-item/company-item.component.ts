@@ -39,3 +39,6 @@ export class CompanyItemComponent implements OnInit {
     this.deleteCompany.emit(company);
   }
 }
+isEmptyObject(obj){
+  return (obj && (Object.keys(obj).length === 0));
+}

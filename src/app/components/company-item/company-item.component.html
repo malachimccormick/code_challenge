@@ -8,7 +8,7 @@
         <li><u>Contact Email</u>: {{ company.email }}</li>
         <li><u>Company Performance</u>: {{ company.performance }}</li>
         <li><u>Company Status</u>: {{ company.status }}</li>
-        <form class="form" (ngSubmit)='onSubmit()'>
+        <form class="form" (ngSubmit)='onSubmit()' *ngIf="isEmptyObject(previous_info)">
           <input type="text" name='companyinfo' [(ngModel)]='companyinfo' placeholder='Company'>
           <input type="hidden" name='id' [(ngModel)]='id' value=`${this.company.id` placeholder='ID'>
           <input type="text" name='contacts' [(ngModel)]='contacts' placeholder='Contacts'>
