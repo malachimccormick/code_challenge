@@ -1,0 +1,37 @@
+#del{
+    background: rgb(255, 58, 58); 
+} 
+#edit{
+    background: yellow;
+}
+.button{
+    
+    color: black;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 50%;
+    cursor: pointer;
+    float: right;
+    margin-right:10px;
+    margin-top:2.5px;
+}.btn{
+    background-color: rgb(199, 236, 169)
+}
+.companyBar{
+    padding-left:10px;
+    background: rgb(69, 69, 230);
+    color: white;
+    margin-top: 10px;
+}
+.company{
+    list-style-type: none;
+    background: lightgray;
+    padding: 10px;
+    border-bottom: 2px #ccc dotted;
+}
+.form input { 
+    padding: 5px;
+}
+.form input[type='submit'] {
+  padding: 7px;
+}

@@ -1,0 +1,10 @@
+<app-add-company (addCompany)= "addCompany($event)"></app-add-company>
+<h4>Target Companys</h4>
+<!-- The ngfor loops through the array I, am also catching the event from company item to use in their respective functions-->
+<app-company-item 
+  *ngFor="let company of companys"  
+  [company]='company'
+  (deleteCompany)='deleteCompany($event)'
+  (editCompany)= 'editCompany($event)'>
+   
+  </app-company-item>

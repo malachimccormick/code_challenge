@@ -1,0 +1,20 @@
+.form {
+  display: flex;
+}
+
+.form input[type='text'] {
+  flex: 20;
+  padding: 5px;
+}
+
+.form input[type='submit'] {
+  flex: 2;
+}
+@media only screen and (max-width: 770px) {
+  .form {
+    display: block;
+  }
+}
+.btn{
+  background-color: rgb(79, 106, 128)
+}
