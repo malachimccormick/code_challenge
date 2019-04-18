@@ -22,7 +22,6 @@ export class CompanyService {
   }
   // Delete Companys
   deleteCompany(company: Company): Observable<Company> {
-    console.log(company);
     const url = `${this.companysUrl}/${company.id}`;
     return this.http.delete<Company>(url, httpOptions);
   }

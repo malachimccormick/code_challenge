@@ -30,22 +30,21 @@ export class CompanyItemComponent implements OnInit {
       performance: this.performance
     };
     // Checking to see if the object is empty. if it is it wont send but if there is data it will
-    if (typeof company.companyinfo === 'undefined' || '') {
+    if (typeof company.companyinfo === 'undefined' || null) {
       company.companyinfo = this.company.companyinfo;
     }
-    if (typeof company.status === 'undefined' || '') {
+    if (typeof company.status === 'undefined' || null) {
       company.status = this.company.status;
     }
-    if (typeof company.contacts === 'undefined' || '') {
+    if (typeof company.contacts === 'undefined' || null) {
       company.contacts = this.company.contacts;
     }
-    if (typeof company.email === 'undefined' || '') {
+    if (typeof company.email === 'undefined' || null) {
       company.email = this.company.email;
     }
-    if (typeof company.performance === 'undefined' || '') {
+    if (typeof company.performance === 'undefined' || null) {
       company.performance = this.company.performance;
     }
-    console.log(company);
     this.editCompany.emit(company);
   }
 
