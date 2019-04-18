@@ -33,7 +33,6 @@ export class CompanysComponent implements OnInit {
     });
   }
   editCompany(company: Company) {
-    console.log(company);
     this.companyService.editCompany(company).subscribe();
     // because the server is a fake server (using a db.json file in GitHub for data) I
     // am having to manipulate the HTML array elements shown because data does not stick.
@@ -44,4 +43,4 @@ export class CompanysComponent implements OnInit {
     this.companys.unshift(company);
   }
  }
-
+.

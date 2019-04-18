@@ -1,5 +1,4 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-
 @Component({
   selector: 'app-add-company',
   templateUrl: './add-company.component.html',
@@ -30,3 +29,4 @@ export class AddCompanyComponent implements OnInit {
     this.addCompany.emit(company);
   }
 }
+.

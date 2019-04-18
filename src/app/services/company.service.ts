@@ -32,7 +32,6 @@ export class CompanyService {
   }
   // Edit Company
   editCompany(company: Company): Observable<Company> {
-    console.log(company);
     const url = `${this.companysUrl}/${company.id}`;
     return this.http.put<Company>(url, company, httpOptions);
   }

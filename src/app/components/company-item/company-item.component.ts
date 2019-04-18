@@ -39,3 +39,4 @@ export class CompanyItemComponent implements OnInit {
     this.deleteCompany.emit(company);
   }
 }
+.
