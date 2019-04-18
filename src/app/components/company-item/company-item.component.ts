@@ -29,16 +29,36 @@ export class CompanyItemComponent implements OnInit {
       email: this.email,
       performance: this.performance
     };
-    // when the function is called the data is passed up to the edit function in the companys
-    // component
+    // Checking to see if the object is empty. if it is it wont send but if there is data it will
+    console.log(company);
+    if (typeof company.companyinfo === 'undefined') {
+      company.companyinfo = this.company.companyinfo;
+    }
+    if (typeof company.status === 'undefined') {
+       company.status = this.company.status;
+     }
+    if (typeof company.contacts === 'undefined') {
+        company.contacts = this.company.contacts;
+      }
+    if (typeof company.email === 'undefined') {
+         company.email = this.company.email;
+       }
+    if (typeof company.performance === 'undefined') {
+       company.performance = this.company.performance;
+     }
+    console.log(company);
     this.editCompany.emit(company);
+    // && company.performance === 'undefined' ||
+    //     company.email === 'undefined' && company.contacts === 'undefined' && company.status === 'undefined') {
+    //    return console.log('empty');
+    //  } else {
+    //   //  the data is passed up to the edit function in the companys component 
+    //  }
   }
+
 
   onDelete(company) {
     // passing up to the delete function in companys component
     this.deleteCompany.emit(company);
   }
-}
-isEmptyObject(obj){
-  return (obj && (Object.keys(obj).length === 0));
 }
