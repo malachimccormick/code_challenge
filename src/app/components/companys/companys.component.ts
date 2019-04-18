@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CompanyService } from '../../services/company.service';
 import { Company } from '../../models/Company';
 import { Observable } from 'rxjs';
+import { Server } from 'net';
 
 
 @Component({
@@ -27,12 +28,19 @@ export class CompanysComponent implements OnInit {
     this.companyService.deleteCompany(company).subscribe();
   }
   addCompany(company: Company) {
+    // this will show an error in the console because the database is simulated so nothing is
+    // actually added to the database.
+    // the below code is correct to add to an actual Server.
     // tslint:disable-next-line:no-shadowed-variable
     this.companyService.addCompany(company).subscribe(company => {
-      this.companys.push(company);
+      this.companys.unshift(company);
     });
   }
   editCompany(company: Company) {
+    // this MAY show an error in the console because the database is simulated so new entries
+    // are not added to the database.
+    // the below code is correct to edit entries on a server.
+    // tslint:disable-next-line:no-shadowed-variable
     this.companyService.editCompany(company).subscribe();
     // because the server is a fake server (using a db.json file in GitHub for data) I
     // am having to manipulate the HTML array elements shown because data does not stick.
