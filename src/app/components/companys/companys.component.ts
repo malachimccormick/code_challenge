@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CompanyService } from '../../services/company.service';
 import { Company } from '../../models/Company';
 import { Observable } from 'rxjs';
-import { Server } from 'net';
 
 
 @Component({
