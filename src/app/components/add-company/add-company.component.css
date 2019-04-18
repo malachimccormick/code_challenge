@@ -10,6 +10,7 @@
 .form input[type='submit'] {
   flex: 2;
 }
+/* @media will help with the add company line to keep it on the page when the screen size changes */
 @media only screen and (max-width: 770px) {
   .form {
     display: block;

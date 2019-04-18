@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+
 @Component({
   selector: 'app-add-company',
   templateUrl: './add-company.component.html',
@@ -24,19 +25,19 @@ export class AddCompanyComponent implements OnInit {
       email: this.email,
       performance: this.performance
     };
-    if (typeof company.companyinfo === 'undefined') {
+    if (typeof company.companyinfo === 'undefined' || ' ') {
       return false;
     }
-    if (typeof company.status === 'undefined') {
+    if (typeof company.status === 'undefined' || ' ') {
       return false;
     }
-    if (typeof company.contacts === 'undefined') {
+    if (typeof company.contacts === 'undefined' || ' ') {
       return false;
     }
-    if (typeof company.email === 'undefined') {
+    if (typeof company.email === 'undefined' || ' ') {
       return false;
     }
-    if (typeof company.performance === 'undefined') {
+    if (typeof company.performance === 'undefined' || ' ') {
       return false;
     }
     // the company variable is then passed to the addCompany function in the companys

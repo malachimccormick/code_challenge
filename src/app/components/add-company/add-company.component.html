@@ -1,4 +1,4 @@
-<form   class="form" (ngSubmit)='onSubmit()'>
+<form [formGroup]="myform" class="form" (ngSubmit)='onSubmit()'>
   <input type="text" name='companyinfo' [(ngModel)]= 'companyinfo' placeholder='Add New Company'> 
   <input type="text" name='status' [(ngModel)]= 'status' placeholder='Add New Status'> 
   <input type="text" name='contacts' [(ngModel)]='contacts' placeholder='Add New Contact'>
