@@ -44,6 +44,7 @@ export class AddCompanyComponent implements OnInit {
     // the company variable is then passed to the addCompany function in the companys
     // component.
     this.addCompany.emit(company);
+    // this resets the form after it is sent
     this.formValues.resetForm();
   }
 }
