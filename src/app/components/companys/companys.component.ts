@@ -43,4 +43,4 @@ export class CompanysComponent implements OnInit {
     this.companys.unshift(company);
   }
  }
-.
+

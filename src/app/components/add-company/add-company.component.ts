@@ -29,4 +29,3 @@ export class AddCompanyComponent implements OnInit {
     this.addCompany.emit(company);
   }
 }
-.
