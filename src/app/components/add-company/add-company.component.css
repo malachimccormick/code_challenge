@@ -19,3 +19,9 @@
 .btn{
   background-color: rgb(79, 106, 128)
 }
+.valid{
+    border:1px solid black;
+}
+.invalid{
+  border:1px solid #f00;
+}

@@ -26,20 +26,11 @@ export class AddCompanyComponent implements OnInit {
       email: this.email,
       performance: this.performance
     };
-    if (typeof company.companyinfo === 'undefined' || null) {
-      return false;
-    }
-    if (typeof company.status === 'undefined' || null) {
-      return false;
-    }
-    if (typeof company.contacts === 'undefined' || null) {
-      return false;
-    }
-    if (typeof company.email === 'undefined' || null) {
-      return false;
-    }
-    if (typeof company.performance === 'undefined' || null) {
-      return false;
+    // Checking to see if the object is empty. if it is it wont send but if there is data it will
+    for (const key in company) {
+      if (typeof company[key] === 'undefined') {
+        return false;
+      }
     }
     // the company variable is then passed to the addCompany function in the companys
     // component.
