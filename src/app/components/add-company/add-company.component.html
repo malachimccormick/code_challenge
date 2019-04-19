@@ -1,8 +1,8 @@
 <form #myForm="ngForm" class="form" (ngSubmit)='onSubmit()'>
-  <input type="text" name='companyinfo' [(ngModel)]= 'companyinfo' required placeholder='Add New Company'> 
-  <input type="text" name='status' [(ngModel)]= 'status' placeholder='Add New Status'> 
-  <input type="text" name='contacts' [(ngModel)]='contacts' placeholder='Add New Contact'>
-  <input type="text" name='email' [(ngModel)]='email' placeholder='Add New Email'>
-  <input type="text" name='performance' [(ngModel)]='performance' placeholder='Add New Performance'>
+  <input type="text" name='companyinfo' [(ngModel)]= 'companyinfo' required placeholder='*Add New Company'> 
+  <input type="text" name='status' [(ngModel)]= 'status' placeholder='*Add New Status'> 
+  <input type="text" name='contacts' [(ngModel)]='contacts' placeholder='*Add New Contact'>
+  <input type="text" name='email' [(ngModel)]='email' placeholder='*Add New Email'>
+  <input type="text" name='performance' [(ngModel)]='performance' placeholder='*Add New Performance'>
   <input type="submit" value="Submit" class="btn">
 </form>
