@@ -28,10 +28,11 @@ export class AddCompanyComponent implements OnInit {
     };
     // Loop checking to see if the object key is empty. if it is it wont send but if there is data it will
     for (const key in company) {
-      if (typeof company[key] === 'undefined') {
+      if (typeof company[key] === 'undefined' || company[key] === null) {
         return false;
       }
     }
+    console.log(company);
     // the company variable is then passed to the addCompany function in the companys
     // component.
     this.addCompany.emit(company);
