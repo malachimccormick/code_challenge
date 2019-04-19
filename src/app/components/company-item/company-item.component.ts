@@ -29,7 +29,7 @@ export class CompanyItemComponent implements OnInit {
       email: this.email,
       performance: this.performance
     };
-    // Checking to see if the object is empty. if it is it wont send but if there is data it will
+    // Checking to see if the object is empty. if it is data wont send but if there is data it will
     for (const key in company) {
     if (typeof company[key] === 'undefined') {
       company[key] = this.company[key];

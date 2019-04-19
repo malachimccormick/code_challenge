@@ -37,7 +37,7 @@ export class CompanysComponent implements OnInit {
   }
   editCompany(company: Company) {
     // this MAY show an error in the console because the database is simulated so new entries
-    // are not added to the database.
+    // dont stick to the database.
     // the below code is correct to edit entries on a server.
     // tslint:disable-next-line:no-shadowed-variable
     this.companyService.editCompany(company).subscribe();
@@ -46,7 +46,7 @@ export class CompanysComponent implements OnInit {
     // first I filter out the company to be edited.
     this.companys = this.companys.filter(c => c.id !== company.id);
     // Then I add the new company to the beginning of the array. If this were a real server
-    // Then the data on the server will be changed and the get request would be called to get the updated data.
+    // Then the data on the server will be changed and we could get the updated data.
     this.companys.unshift(company);
   }
  }
