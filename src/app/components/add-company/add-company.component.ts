@@ -30,8 +30,7 @@ export class AddCompanyComponent implements OnInit {
     // Loop checking to see if the object key is empty. if it is it wont send but if there is data it will
     for (const key in company) {
       if (typeof company[key] === 'undefined' || company[key] === null) {
-      this.stateFlag = !this.stateFlag;
-      return this.stateFlag;
+      return this.stateFlag = !this.stateFlag;
       } else {
          if (typeof company[key] !== 'undefined' || company[key] !== null) {
       this.stateFlag = false;
