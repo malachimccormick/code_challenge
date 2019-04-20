@@ -31,10 +31,6 @@ export class AddCompanyComponent implements OnInit {
     for (const key in company) {
       if (typeof company[key] === 'undefined' || company[key] === null) {
       return this.stateFlag = !this.stateFlag;
-      } else {
-         if (typeof company[key] !== 'undefined' || company[key] !== null) {
-      this.stateFlag = false;
-      }
       }
     }
     // the company variable is then passed to the addCompany function in the companys
