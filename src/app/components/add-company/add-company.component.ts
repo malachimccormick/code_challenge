@@ -7,6 +7,7 @@ import { Component, ViewChild, OnInit, EventEmitter, Output } from '@angular/cor
   styleUrls: ['./add-company.component.css']
 })
 export class AddCompanyComponent implements OnInit {
+  constructor() {}
   @ViewChild('myForm') formValues;
   @Output() addCompany: EventEmitter<any> = new EventEmitter();
   status: string;
@@ -14,7 +15,7 @@ export class AddCompanyComponent implements OnInit {
   contacts: string;
   email: string;
   performance: string;
-  constructor() {}
+  stateFlag = false;
 
   ngOnInit() {}
   onSubmit() {
@@ -29,8 +30,12 @@ export class AddCompanyComponent implements OnInit {
     // Loop checking to see if the object key is empty. if it is it wont send but if there is data it will
     for (const key in company) {
       if (typeof company[key] === 'undefined' || company[key] === null) {
-
-        return;
+      this.stateFlag = !this.stateFlag;
+      return this.stateFlag;
+      } else {
+         if (typeof company[key] !== 'undefined' || company[key] !== null) {
+      this.stateFlag = false;
+      }
       }
     }
     // the company variable is then passed to the addCompany function in the companys
@@ -38,5 +43,10 @@ export class AddCompanyComponent implements OnInit {
     this.addCompany.emit(company);
     // this resets the form after it is sent
     this.formValues.resetForm();
+  }
+  setClasses() {
+    return {
+      invalid: this.stateFlag
+    };
   }
 }

@@ -19,3 +19,7 @@
 .btn{
   background-color: rgb(79, 106, 128)
 }
+
+.invalid {
+  border: 2px solid red;
+}
